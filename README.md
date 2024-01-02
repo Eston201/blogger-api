@@ -31,7 +31,7 @@ The backend for the blogger app.
         ~~~~sql
             CREATE TABLE blog (
                 blog_id SERIAL PRIMARY KEY,
-                author VARCHAR(20) REFERENCES "user"(username),
+                author VARCHAR(20) REFERENCES "user"(username) NOT NULL,
                 title VARCHAR(30) NOT NULL,
                 content TEXT NOT NULL,
                 category VARCHAR(25) NOT NULL,
